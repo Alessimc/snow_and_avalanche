@@ -4,14 +4,14 @@ import seaborn as sns
 
 sns.set_style("dark")
 # Create data for the scatter plot
-ECT_P = [22, 2, 3, 29, 23, 21]
-PST_P = [41/100, 29/100, 38/100, 66/100, 55/100, 55/100]
+ECT_P = [22, 2, 3, 29, 23, 21, 13]
+PST_P = [41/100, 29/100, 38/100, 66/100, 55/100, 55/100, 48/100]
 
-ECT_NP = [30]
-PST_NP = [50/100]
+ECT_NP = [25, 14, 24, 9]
+PST_NP = [50/100, 99/100, 100/100, 99/100]
 
-ECT_NF = [31]
-PST_NF = [95/100]
+ECT_NF = [31, 31]
+PST_NF = [95/100, 53/100]
 
 # Create scatter plot
 plt.figure(figsize=(8, 6))
@@ -65,14 +65,14 @@ import seaborn as sns
 
 sns.set_style("dark")
 # Create data for the scatter plot
-ECT_P = np.array([22, 2, 3, 29, 23, 21])
-PST_P = np.array([41/100, 29/100, 38/100, 66/100, 55/100, 55/100])
+ECT_P = np.array([22, 2, 3, 29, 23, 21, 13])
+PST_P = np.array([41/100, 29/100, 38/100, 66/100, 55/100, 55/100, 48/100])
 
-ECT_NP = [30]
-PST_NP = [50/100]
+ECT_NP = np.array([25, 14, 24, 9])
+PST_NP = np.array([50/100, 99/100, 100/100, 99/100])
 
-ECT_NF = [31]
-PST_NF = [95/100]
+ECT_NF = np.array([31, 31])
+PST_NF = np.array([95/100, 53/100])
 
 # Create scatter plot
 plt.figure(figsize=(8, 6))
@@ -112,7 +112,7 @@ plt.plot(ECT_P, predicted_values, color='blue', label=f"Theil-Sen Regression \n 
 
 # Set axis limits
 plt.xlim(0, 32)
-plt.ylim(0, 1)
+plt.ylim(0, 1.05)
 
 # Set axis labels and title
 plt.xlabel('ECT Taps')
